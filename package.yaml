@@ -1,0 +1,38 @@
+library:
+  source-dirs: src
+tests:
+  browser-engine-test:
+    source-dirs: test
+    main: Spec.hs
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - browser-engine
+copyright: 2020 Author name here
+maintainer: example@example.com
+dependencies:
+  - base >= 4.7 && < 5
+  - text
+  - unordered-containers
+  - mtl
+name: browser-engine
+version: 0.1.0.0
+extra-source-files:
+  - README.md
+  - ChangeLog.md
+author: Author name here
+github: githubuser/browser-engine
+license: BSD3
+executables:
+  browser-engine-exe:
+    source-dirs: app
+    main: Main.hs
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - browser-engine
+description: Please see the README on GitHub at <https://github.com/githubuser/browser-engine#readme>
